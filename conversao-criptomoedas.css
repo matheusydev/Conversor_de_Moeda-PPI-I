@@ -38,7 +38,13 @@ input {
   border-radius: 4px;
 }
 
-/* Estilo do botão */
+/* Estilo dos botões */
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
 button {
   width: 100%;
   background-color: #007BFF;
@@ -51,7 +57,23 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #007BFF;
+}
+
+#botaoInverter {
+  background-color: #007BFF;
+}
+
+#botaoInverter:hover {
+  background-color: #007BFF;
+}
+
+#botaoLimpar {
+  background-color: #007BFF;
+}
+
+#botaoLimpar:hover {
+  background-color: #007BFF;
 }
 
 /* Estilo para o resultado */
@@ -67,4 +89,18 @@ button:hover {
 
 #resultado p {
   margin: 5px 0;
+}
+
+.erro {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+  }
+
+  .botoes {
+    grid-template-columns: 1fr;
+  }
 }

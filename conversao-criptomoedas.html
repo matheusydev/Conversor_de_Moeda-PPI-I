@@ -12,13 +12,31 @@
 <body>
   <div class="container">
     <h1>Consultar Preço de Moedas</h1>
+
     <label for="moedaBase">Moeda Base (Ex.: BTC):</label>
-    <input type="text" id="moedaBase" placeholder="Digite a moeda base">
+    <input type="text" id="moedaBase" list="moedasBase" placeholder="Digite a moeda base">
 
     <label for="moedaConversao">Moeda Conversão (Ex.: USDT):</label>
-    <input type="text" id="moedaConversao" placeholder="Digite a moeda de conversão">
+    <input type="text" id="moedaConversao" list="moedasConversao" placeholder="Digite a moeda de conversão">
 
-    <button id="botaoConsultar">Consultar</button>
+    <datalist id="moedasBase">
+      <option value="BTC">
+      <option value="ETH">
+      <option value="SOL">
+      <option value="XRP">
+      <option value="DOGE">
+    </datalist>
+
+    <datalist id="moedasConversao">
+      <option value="USDT">
+      <option value="BRL">
+    </datalist>
+
+    <div class="botoes">
+      <button id="botaoConsultar">Consultar</button>
+      <button id="botaoInverter" type="button">Inverter moedas</button>
+      <button id="botaoLimpar" type="button">Limpar campos</button>
+    </div>
 
     <div id="resultado"></div>
   </div>
